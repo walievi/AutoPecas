@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alievi.autopeca.controller.FornecedorController" spacing="10">
+    <HBox spacing="10">
+        <Label text="Nome:"/>
+        <TextField fx:id="nomeField" prefWidth="200"/>
+
+        <Label text="CNPJ:"/>
+        <TextField fx:id="cnpjField" prefWidth="200"/>
+
+        <Label text="Contato:"/>
+        <TextField fx:id="contatoField" prefWidth="200"/>
+
+        <Button text="Salvar" onAction="#handleSalvar" prefWidth="100"/>
+        <Button text="Excluir" onAction="#handleExcluir" prefWidth="100"/>
+        <Button text="Lista de Peças" onAction="#handleListaPecas" prefWidth="100"/>
+    </HBox>
+
+    <TableView fx:id="tabelaFornecedores" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colunaId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colunaNome" text="Nome" prefWidth="200"/>
+            <TableColumn fx:id="colunaCnpj" text="CNPJ" prefWidth="200"/>
+            <TableColumn fx:id="colunaContato" text="Contato" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>

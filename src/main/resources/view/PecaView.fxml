@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alievi.autopeca.controller.PecaController" spacing="10">
+    <HBox spacing="10">
+        <Label text="Nome:"/>
+        <TextField fx:id="nomeField" prefWidth="200"/>
+
+        <Label text="Preço:"/>
+        <TextField fx:id="precoField" prefWidth="100"/>
+
+        <Button text="Salvar" onAction="#handleSalvar" prefWidth="100"/>
+        <Button text="Excluir" onAction="#handleExcluir" prefWidth="100"/>
+    </HBox>
+
+    <TableView fx:id="tabelaPecas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colunaId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colunaNome" text="Nome" prefWidth="200"/>
+            <TableColumn fx:id="colunaPreco" text="Preço" prefWidth="100"/>
+        </columns>
+    </TableView>
+</VBox>

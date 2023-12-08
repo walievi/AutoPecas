@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alievi.autopeca.controller.PecaFornecedorController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="10.0">
+            <Label text="Selecione a Peça:" />
+            <ComboBox fx:id="comboPecas" />
+            <Label text="Valor da Peça:" />
+            <TextField fx:id="valorField" />
+            <Button text="Adicionar Peça" onAction="#adicionarPecaFornecedor" />
+            <Button text="Excluir Peça" onAction="#excluirPecaFornecedor" />
+        </VBox>
+        <TableView fx:id="tabelaPecasFornecedor" layoutX="200.0" layoutY="20.0" prefHeight="360.0" prefWidth="380.0">
+            <columns>
+                <TableColumn fx:id="colunaNomePeca" text="Nome da Peça" />
+                <TableColumn fx:id="colunaValor" text="Valor" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

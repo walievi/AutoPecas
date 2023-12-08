@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alievi.autopeca.controller.MenorPrecoController">
+    <!-- Conteúdo da primeira tela (menu) na região esquerda -->
+    <left>
+        <VBox spacing="10" alignment="CENTER">
+            <ImageView fx:id="logoImageView" fitHeight="100" preserveRatio="true">
+                <image>
+                    <Image url="@../assets/DALL_E_logo.png"/>
+                </image>
+            </ImageView>
+            <Button text="Gerenciar Peças" onAction="#abrirGerenciarPecas"/>
+            <Button text="Gerenciar Fornecedores" onAction="#abrirGerenciarFornecedores"/>
+            <Button text="Sobre" onAction="#abrirSobre"/>
+        </VBox>
+    </left>
+
+    <!-- Conteúdo da segunda tela (tabela) na região central -->
+    <center>
+        <VBox spacing="10" prefHeight="400" prefWidth="600" alignment="CENTER">
+            <TableView fx:id="tabelaPecasFornecedor">
+                <columns>
+                    <TableColumn fx:id="colunaNomePeca" text="Nome da Peça"/>
+                    <TableColumn fx:id="colunaValorVenda" text="Valor de Venda"/>
+                    <TableColumn fx:id="colunaLucro" text="Margem de Lucro"/>
+                    <TableColumn fx:id="colunaNomeFornecedor" text="Fornecedor"/>
+                    <TableColumn fx:id="colunaValorCompra" text="Valor Compra"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
